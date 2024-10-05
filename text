@@ -1,0 +1,22 @@
+iii Generate Button
+
+Once user clicks, it should use this API to generate a Meme with user provided text:
+POST request: https://api.imgflip.com/caption_image?template_id=<memeId>&username=<imgflipusername>&password=<imgflippassword>&text0=<text1FromUser>&text1=<text2FromUser&gt;
+
+For e.g.:
+https://api.imgflip.com/caption_image?template_id=181913649&username=mabdullah&password=123456&text0=Hey there&text1=hello world
+
+It generated:
+
+https://i.imgflip.com/8foj86.jpg
+
+For username and password, signup at imgflip.com
+Show the generated image to user! Happy coding!
+Class comments
+
+
+
+post request code.
+fetch('https://example.com/api/users&#39;, {
+    method: 'POST'
+})
