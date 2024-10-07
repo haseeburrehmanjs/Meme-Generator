@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
 
 const page = async () => {
@@ -16,8 +17,18 @@ const page = async () => {
       </marquee>
       <section className='mx-auto container'>
         <div className='flex flex-wrap justify-between mt-10 gap-3'>
-          {responce.data.memes.map((item) => (
-            <Image key={item.id} src={item.url} width={300} height={300} />
+          {responce.data.memes.map((item,index) => (
+            <Link href={
+              {
+                pathname: "singalmeme",
+                query: {
+                  url: item.url,
+                  id: item.id,
+                }
+              }
+            }>
+              <Image className='tilt-in-top-1' key={index} src={item.url} width={200} height={100} />
+            </Link>
           ))}
         </div>
       </section>
