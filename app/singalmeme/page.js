@@ -16,7 +16,7 @@ const SingalMeme = (searchParam) => {
         <div>
             <h1 className='text-4xl justify-center flex items-center h-[100vh] font-bold'>
                 <Image width={300} height={300} src={searchParam.searchParams.url} />
-                {for}
+                {/* {for} */}
             </h1>
         </div>
     )
