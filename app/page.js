@@ -18,16 +18,17 @@ const page = async () => {
       <section className='mx-auto container'>
         <div className='flex flex-wrap justify-between mt-10 gap-3'>
           {responce.data.memes.map((item,index) => (
-            <Link href={
+            <Link key={index} href={
               {
                 pathname: "singalmeme",
                 query: {
                   url: item.url,
                   id: item.id,
+                  box_count: item.box_count
                 }
               }
             }>
-              <Image className='tilt-in-top-1' key={index} src={item.url} width={200} height={100} />
+              <Image className='tilt-in-top-1' src={item.url} width={200} height={100} />
             </Link>
           ))}
         </div>
