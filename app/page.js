@@ -1,3 +1,4 @@
+import { ListItem } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
@@ -12,12 +13,12 @@ const page = async () => {
       <h1 className='text-center mt-5 text-5xl font-bold'>
         Meme Generator
       </h1>
-      <marquee>
-        Do you Want Generate Meme to Click Image
+      <marquee className='mt-3'>
+        Do yout want to Generate Meme to click on Image
       </marquee>
       <section className='mx-auto container'>
-        <div className='flex flex-wrap justify-between mt-10 gap-3'>
-          {responce.data.memes.map((item,index) => (
+        <div className='flex flex-wrap justify-center mt-10 gap-3'>
+          {responce.data.memes.filter(item => item.box_count === 2).map((item, index) => (
             <Link key={index} href={
               {
                 pathname: "singalmeme",
@@ -28,7 +29,7 @@ const page = async () => {
                 }
               }
             }>
-              <Image className='tilt-in-top-1' src={item.url} width={200} height={100} />
+              <Image className='tilt-in-top-1 hover:relative hover:bottom-2 hover:shadow-lg hover:border hover: transition-delay: 150ms' src={item.url} width={400} height={'300'} />
             </Link>
           ))}
         </div>
@@ -38,3 +39,5 @@ const page = async () => {
 }
 
 export default page
+
+
