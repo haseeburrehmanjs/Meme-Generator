@@ -14,7 +14,7 @@ const page = async () => {
         Meme Generator
       </h1>
       <marquee className='mt-3'>
-        Do yout want to Generate Meme to click on Image
+      Do you want to generate a meme? Click on the image!
       </marquee>
       <section className='mx-auto container'>
         <div className='flex flex-wrap justify-center mt-10 gap-3'>
