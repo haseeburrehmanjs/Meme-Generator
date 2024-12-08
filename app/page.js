@@ -29,7 +29,7 @@ const page = async () => {
                 }
               }
             }>
-              <Image className='tilt-in-top-1 hover:relative hover:bottom-2 hover:shadow-lg hover:border hover: transition-delay: 150ms' src={item.url} width={400} height={'300'} />
+              <Image className='hover:shadow-2xl transform hover:scale-95' src={item.url} width={400} height={'300'} />
             </Link>
           ))}
         </div>
